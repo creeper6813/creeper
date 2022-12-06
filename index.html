@@ -24,18 +24,56 @@
       border: 1px solid #02ee2f;
     }
     
+    .kecil{
+      height: 40px;
+      width: 170px;
+      background-color: black;
+      border-radius: 3;
+      border: 1px solid #02ee2f;
+    }
+    
     .container{
       display: flex;
     }
+
+ 	.jam-digital-malasngoding {
+		overflow: hidden;
+		width: 330px;
+		margin: 15px auto;
+		border: 1px solid black;
+	}
+	.kotak{
+		float: left;
+		width: 110px;
+		height: 50px;
+		background-color: black;
+	}
+	.jam-digital-malasngoding p {
+		color: #fff;
+		font-size: 21px;
+		text-align: center;
+		margin-top: 15px;
+	}
+
 
   </style>
  <center>
    <img src='https://i.postimg.cc/7YDQhhkY/20221201-200433.png' height="50px">
    <font color="#02ee2f"></text>
-   
+     
  </center>
- <img src='https://i.postimg.cc/635z1HDR/20221201-202409.jpg' height="1px" width="332px"><br><br>
- 
+
+ <div class="jam-digital-malasngoding">
+	<div class="kotak">
+		<p id="jam"></p>
+	</div>
+	<div class="kotak">
+		<p id="menit"></p>
+	</div>
+	<div class="kotak">
+		<p id="detik"></p>
+	</div>
+</div>
 <div class="wah">
   <div class="container">
   <img src='https://i.postimg.cc/SN535z7R/20221201-205727.png' height="80px">
@@ -66,16 +104,27 @@
   </div>
 
 <br>
-
-<video src="tikdown.mp4" height="180px" autoplay controls> </video>
+<iframe width="340" height="215" src="https://www.youtube.com/embed/2cXE0KGz9_c" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+ 
  </font>
- <br>
- <br>
  <br>
  <br>
  <br>
  <center>
  <img src='https://i.postimg.cc/NGKS8QhY/20221203-200536.png' height="30px">
+ 
+ <a href="https://php.id/ref/54449" target="_blank"><img src='https://i.postimg.cc/br36G8mw/930x180.png' height="66"></a>
  </center>
+ <script>
+  	window.setTimeout("waktu()", 1000);
+ 
+	function waktu() {
+		var waktu = new Date();
+		setTimeout("waktu()", 1000);
+		document.getElementById("jam").innerHTML = waktu.getHours();
+		document.getElementById("menit").innerHTML = waktu.getMinutes();
+		document.getElementById("detik").innerHTML = waktu.getSeconds();
+	} 
+ </script>
 </body>
 </html>
