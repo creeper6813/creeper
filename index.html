@@ -38,21 +38,21 @@
 
  	.jam-digital-malasngoding {
 		overflow: hidden;
-		width: 330px;
+		width: 340px;
 		margin: 15px auto;
-		border: 1px solid black;
+		border: 1px solid #02ee2f;
 	}
 	.kotak{
 		float: left;
 		width: 110px;
-		height: 50px;
+		height: 40px;
 		background-color: black;
 	}
 	.jam-digital-malasngoding p {
 		color: #fff;
-		font-size: 21px;
+		font-size: 20px;
 		text-align: center;
-		margin-top: 15px;
+		margin-top: 10px;
 	}
 
 
@@ -62,6 +62,12 @@
    <font color="#02ee2f"></text>
      
  </center>
+
+<p>Tanggal: <span id="tanggalwaktu"></span></p>
+<script>
+var dt = new Date();
+document.getElementById("tanggalwaktu").innerHTML = dt.toLocaleDateString();
+</script>
 
  <div class="jam-digital-malasngoding">
 	<div class="kotak">
