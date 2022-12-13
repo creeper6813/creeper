@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {margin:0;}
+
+ul.menuatas {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #a500e2;
+}
+
+ul.menuatas li {float: left;}
+
+ul.menuatas li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+ul.menuatas li a:hover {background-color: #ff0000;}
+ul.menuatas li.icon {display: none;}
+
+
+@media screen and (max-width:680px) {
+  ul.menuatas li:not(:first-child) {display: none;}
+  ul.menuatas li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+
+
+@media screen and (max-width:680px) {
+  ul.menuatas.responsive {position: relative;}
+  ul.menuatas.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.menuatas.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.menuatas.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+  .wah{
+      height: 260px;
+      width: 356px;
+      background-color: #e5e5e5;
+      border-radius: 3;
+      border: 1px solid #a8a8a8;
+    }
+    
+        .container{
+      display: flex;
+    }
+</style>
+</head>
+<body>
+
+<ul class="menuatas" id="myTopnav">
+  <li><a class="active" href="video.html">Video</a></li>
+  <li><a href="#news">subscribe</a></li>
+  <li><a href="#contact">Minecraft java</a></li>
+  <li><a href="#about">Minecraft bedrock</a></li>
+  <li class="icon">
+    <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction
+
+()">☰</a>
+  </li>
+</ul>
+
+<div style="padding-left:0px">
+  <div class="wah"><center>
+<iframe width="340" height="215" src="https://www.youtube.com/embed/xLDHdD8gbSc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</center>
+<div style="padding-left:5px;">
+  <div class="container">
+<img src='https://i.postimg.cc/5Nh5dC4p/20221213-090542.png' height="35px">
+<div style="padding-left:4px;">
+  
+  MEMBUAT KANDANG AYAM DI MINECRAFT
+</div>
+</div>
+  </div>
+</div>
+</div>
+<br>
+<div style="padding-left:0px">
+  <div class="wah"><center>
+<iframe width="340" height="215" src="https://www.youtube.com/embed/pGDxED5yrgY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</center>
+<div style="padding-left:5px;">
+  <div class="container">
+<img src='https://i.postimg.cc/5Nh5dC4p/20221213-090542.png' height="35px">
+<div style="padding-left:4px;">
+  
+  MEMBUAT RUMAH SURVIVAL MINECRAFT #1
+</div>
+</div>
+  </div>
+</div>
+</div>
+
+<br>
+<div style="padding-left:0px">
+  <div class="wah"><center>
+<iframe width="340" height="215" src="https://www.youtube.com/embed/2cXE0KGz9_c" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</center>
+<div style="padding-left:5px;">
+  <div class="container">
+<img src='https://i.postimg.cc/5Nh5dC4p/20221213-090542.png' height="35px">
+<div style="padding-left:4px;">
+  
+  Minecraft old village cinematic
+</div>
+</div>
+  </div>
+</div>
+</div>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "menuatas") {
+        x.className += " responsive";
+    } else {
+        x.className = "menuatas";
+    }
+}
+</script>
+
+</body>
+</html>
