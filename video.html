@@ -25,7 +25,7 @@ iframe {
     background: #000;
     border: none;         /* Reset default border */
     height: 215px;        /* Viewport-relative units */
-    width: 358px;
+    width: 350px;
 }
 
 ul.menuatas li {float: left;}
@@ -87,6 +87,78 @@ ul.menuatas li.icon {display: none;}
         .container{
       display: flex;
     }
+    
+    
+    
+    * {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    quotes: none;
+    text-decoration: unset;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    overflow-x: hidden;
+    margin: 0px auto;
+}
+
+nav {
+    padding: 10px 20px;
+}
+
+nav .brand a{
+    color: black;
+}
+
+main {
+    padding: 10px 10px 70px;
+    position: relative;
+}
+
+main p {
+    padding: 5px 0;
+}
+
+
+.bottom-nav {
+    padding: 5px;
+    background-color: #2A6FFC;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+
+}
+
+.bottom-link-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bottom-nav a {
+    color: white;
+    cursor: pointer;
+}
+
+.bottom-nav a svg {
+    width: 30px;
+}
+
+
+    
 </style>
 </head>
 <body>
@@ -158,6 +230,42 @@ ul.menuatas li.icon {display: none;}
   </div>
 </div>
 </div>
+
+
+    <div class="brand">
+      <a href="">
+        <h2></h2>
+      </a>
+    </div>
+  </nav>
+
+  <main>  
+   
+  </main> 
+
+
+  <div class="bottom-nav">
+    <div class="bottom-link-nav"> 
+    <a href="video.html">
+     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+  <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
+</svg>
+    </a>
+
+
+    <a href="https://abcdefghijklmnopqrstux.on.drv.tw/inde/video2.html">
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-fast-forward-btn" viewBox="0 0 16 16">
+  <path d="M8.79 5.093A.5.5 0 0 0 8 5.5v1.886L4.79 5.093A.5.5 0 0 0 4 5.5v5a.5.5 0 0 0 .79.407L8 8.614V10.5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5Z"/>
+  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4Z"/>
+</svg>
+    </a>
+    <a href="">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+    </a>
+    </div>
+    
+  </div>
+
 
 <script>
 function myFunction() {
