@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    </head>
+    <body>
+      <button id="myButton" onClick="changeText()">Klik untuk mengubah teks</button>
+
+      
+      </body>
+      <script>
+      document.getElementById("myInput").addEventListener("paste", function(event) {
+   // code untuk mengubah teks
+});
+
+
+let pastedText = event.clipboardData.getData('text');
+
+      
+      let modifiedText = pastedText.replace("Hahaha", "Hihihi");
+
+document.getElementById("myInput").value = modifiedText;
+
+    function changeText() {
+   let currentText = document.getElementById("myInput").value;
+   let modifiedText = currentText.replace("Hahaha", "Hihihi");
+   document.getElementById("myInput").value = modifiedText;
+}
+  
+      
+      </script>
+      </html>
