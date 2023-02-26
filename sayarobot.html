@@ -1,32 +1,78 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-      <button id="myButton" onClick="changeText()">Klik untuk mengubah teks</button>
+    <title>Google Drive Direct Link Generator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h1>Google Drive Direct Link Generator</h1>
+    <p>Tempel link file yang telah di salin dari Google drive:</p>
+    <input type="text" id="fileUrl" placeholder="https://drive.google.com/file/d/...">
+    <button id="generateBtn">Generate Direct Link</button>
+    <p id="linkOutput"></p>
+    <script src="index.js"></script>
+    <br>
+    <br>
+    <h1>PETUNJUK</h1>
+    <font size="2">pastikan file yang akan di salin link nya di ubah ke publik dulu dan setelah di ubah ke publik baru di salin link file yang di publik tadi
+<br>
+<br>
+setelah di salin, tempel link di atas dan pencet tombol generate
+<br>
+<br>
+ATAU IKUTI CARA INI:
+<video width="340" height="640" controls>
+  <source src="https://drive.google.com/uc?export=download&id=1eSIch9vOXbLfko5dBFtP3xS_HI182klD" type="video/mp4">
+  <source src="nama_file_video.webm" type="video/webm">
+  Your browser does not support the video tag.
+</video>
 
-      
-      </body>
-      <script>
-      document.getElementById("myInput").addEventListener("paste", function(event) {
-   // code untuk mengubah teks
-});
+</font>
+  </body>
+  <script>
+  const generateBtn = document.getElementById("generateBtn");
+const fileUrlInput = document.getElementById("fileUrl");
+const linkOutput = document.getElementById("linkOutput");
 
+generateBtn.addEventListener("click", generateLink);
 
-let pastedText = event.clipboardData.getData('text');
+function generateLink() {
+  // Get file ID from URL
+  const url = fileUrlInput.value;
+  const id = url.match(/[-\w]{25,}/);
+  if (!id) {
+    linkOutput.innerHTML = "Invalid file URL";
+    return;
+  }
 
-      
-      let modifiedText = pastedText.replace("Hahaha", "Hihihi");
+  // Generate direct link
+  const directLink = `https://drive.google.com/uc?export=download&id=${id}`;
 
-document.getElementById("myInput").value = modifiedText;
-
-    function changeText() {
-   let currentText = document.getElementById("myInput").value;
-   let modifiedText = currentText.replace("Hahaha", "Hihihi");
-   document.getElementById("myInput").value = modifiedText;
+  // Show direct link and update button text
+  linkOutput.innerHTML = `<a href="${directLink}" target="_blank">${directLink}</a>`;
+  generateBtn.innerHTML = "Link Generated!";
 }
+
+  </script>
+  <style>
+  #generateBtn {
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4285f4;
+  color: #fff;
+  cursor: pointer;
+}
+
+#generateBtn:hover {
+  background-color: #3367d6;
+}
+
+#linkOutput {
+  margin-top: 10px;
+}
+
   
-      
-      </script>
-      </html>
+  </style>
+</html>
