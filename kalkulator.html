@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kalkulator</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+		}
+
+		h1 {
+			text-align: center;
+			margin-top: 50px;
+			margin-bottom: 30px;
+		}
+
+		.container {
+			width: 300px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #d9d9d9;
+			border-radius: 10px;
+			box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+		}
+
+		#screen {
+			width: 100%;
+			height: 50px;
+			font-size: 24px;
+			margin-bottom: 10px;
+			padding: 5px;
+			border: none;
+			border-radius: 5px;
+			background-color: white;
+			text-align: right;
+		}
+
+		.btn {
+			width: 50px;
+			height: 50px;
+			font-size: 24px;
+			margin: 5px;
+			border: none;
+			border-radius: 5px;
+			background-color: #bfbfbf;
+			color: white;
+			cursor: pointer;
+			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+		}
+
+		.btn:hover {
+			background-color: #a6a6a6;
+		}
+
+		.clear {
+			background-color: #e74c3c;
+		}
+
+		.clear:hover {
+			background-color: #c0392b;
+		}
+
+		.backspace {
+			background-color: #f1c40f;
+		}
+
+		.backspace:hover {
+			background-color: #f39c12;
+		}
+	</style>
+</head>
+<body>
+	<h1>Kalkulator</h1>
+	<div class="container">
+		<input type="text" id="screen" readonly>
+		<div>
+			<button class="btn" onclick="addToScreen('7')">7</button>
+			<button class="btn" onclick="addToScreen('8')">8</button>
+			<button class="btn" onclick="addToScreen('9')">9</button>
+			<button class="btn backspace" onclick="backspace()">&#8592;</button>
+		</div>
+		<div>
+			<button class="btn" onclick="addToScreen('4')">4</button>
+			<button class="btn" onclick="addToScreen('5')">5</button>
+			<button class="btn" onclick="addToScreen('6')">6</button>
+			<button class="btn" onclick="addToScreen('+')">+</button>
+		</div>
+		<div>
+			<button class="btn" onclick="addToScreen('1')">1</button>
+			<button class="btn" onclick="addToScreen('2')">2</button>
+			<button class="btn" onclick="addToScreen('3')">3</button>
+			<button class="btn" onclick="addToScreen('-')">-</button>
+		</div>
+		<div>
+			<button class="btn" onclick="addToScreen('0')">0</button>
+			<button class="btn" onclick="addToScreen('.')">.</button>
+						<button class="btn" onclick="calculate()">=</button>
+			<button class="btn" onclick="addToScreen('*')">&times;</button>
+		</div>
+		<div>
+			<button class="btn clear" onclick="clearScreen()">🚮</button>
+			<button class="btn" onclick="addToScreen('(')">(</button>
+			<button class="btn" onclick="addToScreen(')')">)</button>
+			<button class="btn" onclick="addToScreen('/')">&#247;</button>
+		</div>
+	</div>
+
+	<script>
+		function addToScreen(value) {
+			document.getElementById("screen").value += value;
+		}
+
+		function clearScreen() {
+			document.getElementById("screen").value = "";
+		}
+
+		function backspace() {
+			let screen = document.getElementById("screen").value;
+			document.getElementById("screen").value = screen.substr(0, screen.length - 1);
+		}
+
+		function calculate() {
+			let screen = document.getElementById("screen").value;
+			let result = eval(screen);
+			document.getElementById("screen").value = result;
+		}
+	</script>
+</body>
+</html>
+
