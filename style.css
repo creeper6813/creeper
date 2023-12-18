@@ -279,3 +279,26 @@ body.dark {
 	}
 
 
+#teksToCopy {
+            color: white;        /* Warna teks putih di dalam textarea */
+            background-color: black;  /* Warna latar belakang hitam di dalam textarea */
+            border: 1px solid white;  /* Garis putih untuk memisahkan textarea */
+            padding: 10px;           /* Padding untuk memberi ruang di dalam textarea */
+            height: 240px;
+            width: 340px;
+        }
+
+        button {
+            background-color: gray;  /* Warna latar belakang tombol */
+            color: white;            /* Warna teks tombol */
+            padding: 5px 10px;        /* Padding untuk memberi ruang di dalam tombol */
+            border: none;            /* Tanpa garis pada tombol */
+            cursor: pointer;         /* Kursor berubah menjadi tanda tangan saat di atas tombol */
+        }
+        
+       .kokbisa {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            width: 300px; /* Sesuaikan lebar textarea sesuai kebutuhan */
+        }
