@@ -302,3 +302,69 @@ body.dark {
             position: relative;
             width: 300px; /* Sesuaikan lebar textarea sesuai kebutuhan */
         }
+        
+        
+          	#hasilContainer {
+    background-color: black; /* Latar belakang hitam pada container */
+    color: white; /* Warna teks putih */
+    padding: 20px; /* Memberikan ruang pola pada container */
+    border-radius:7px;
+    border:3px solid #7062dc;
+  }
+  
+  	#downloadButton,
+  #downloadHDButton {
+  	margin-top: 10px;
+    margin-right: 4px; /* Menambahkan jarak 10px di sebelah kanan tombol */
+  }
+  #videoElement {
+    margin-bottom: 10px; /* Memberikan jarak 10px dari bawah video ke tombol */
+  }
+  p {
+    margin-bottom: 10px; /* Memberikan jarak 10px dari bawah teks ke tombol */
+  }
+  
+  	#linkTikTok {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+  }
+  
+    #klikTombol {
+      background-color: green;
+      color: white;
+      padding: 10px 15px;
+      border-radius:4px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #klikTombol:hover {
+      background-color: darkgreen;
+    }
+
+    #klikTombol:active {
+      background-color: red;
+    }
+    
+    #downloadButton {
+    background-color: #651ce3; /* Warna ungu */
+    color: #fff; /* Warna teks putih */
+    padding: 12px 12px;
+    height:30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+  }
+
+  #downloadButton:hover {
+    background-color: #6c3483; /* Warna ungu yang sedikit lebih gelap saat dihover */
+  }
+    
+    
