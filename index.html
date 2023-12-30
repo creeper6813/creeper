@@ -251,7 +251,23 @@ https://drive.google.com/uc?export=download&id=1DG9joxp4n-_jXdoUnxLRlM29Vzx1POkG
     <a href="https://drive.google.com/uc?export=download&id=1FJQT8nJ_gxcOTdlHFtabo14iQ760iZkK1VbAGDb1d3Xc-PAqPE0dqmOAHEf8b833T">DOWNLOAD MAP</a>
     <br>
     <br>
+    <h1>tiktok downloader:</h1>
+ 
+    <br>
+    <label for="linkTikTok">Masukkan link TikTok:</label>
+  <br></font>
+  <input type="text" id="linkTikTok">
+  <br>
+  <button id="klikTombol">KLIK UNTUK MUNCULKAN HASIL</button>
+  <br>
+  	<br>
+  	<center>
+  <div id="hasilContainer"></div>
+  </center>
     <center>
+      <br>
+      
+      <br>
     <font size="4">𝙱𝙴𝚁𝙸𝙺𝚄𝚃 𝙰𝙳𝙰𝙻𝙰𝙷 𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙾𝙳𝙴 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 𝚄𝙽𝚃𝚄𝙺 𝙱𝙾𝚃 𝚆𝙷𝙰𝚃𝚂𝙰𝙿𝙿 𝙲𝙰𝚂𝙴</font>
     </center>
     <br>
@@ -335,6 +351,88 @@ await reply(`*tunggu sebentar ya kak...*`)
     
   </body>
     <script>
+    
+        document.getElementById('klikTombol').addEventListener('click', async function() {
+      const tiktokLinkInput = document.getElementById('linkTikTok');
+      const tiktok_url = tiktokLinkInput.value.trim();
+
+      if (!tiktok_url) {
+        alert('Masukkan link TikTok terlebih dahulu.');
+        return;
+      }
+
+const hasilContainer = document.getElementById('hasilContainer');
+  hasilContainer.innerHTML = 'Tunggu sebentar...';
+      // Menggunakan fetch untuk memanggil API
+      try {
+      	// Ubah apiUrl sesuai dengan endpoint API yang benar
+const apiUrl = `https://apipanas.akulupalagi91.repl.co/?tiktokUrl=${encodeURIComponent(tiktok_url)}`;
+
+               const response = await fetch(apiUrl);
+
+        if (!response.ok) {
+          throw new Error('Gagal mendownload video TikTok');
+        }
+
+        const result = await response.json();
+        console.log('URL Video:', result.result.video1);
+
+        const hasilContainer = document.getElementById('hasilContainer');
+        
+  const textElement = document.createElement('p');
+textElement.innerHTML = `Name: ${result.result.author.nickname}<br>Desc: ${result.result.desc}`;
+       
+   const texteElement = document.createElement('p');
+texteElement.innerHTML = `Desc: ${result.result.desc}<br>`;
+           
+       
+       
+       const wmbutton = document.createElement('button'); // Mengganti elemen 'a' dengan 'button'
+wmbutton.id = 'downloadButton';  // Memperbarui id untuk menghindari konflik
+wmbutton.innerText = 'Download mp3';
+wmbutton.addEventListener('click', function() {
+  window.open(result.result.music, '_blank');
+});
+
+       
+const hdbutton = document.createElement('button'); // Mengganti elemen 'a' dengan 'button'
+hdbutton.id = 'downloadButton';  // Memperbarui id untuk menghindari konflik
+hdbutton.innerText = 'Download Video HD';
+hdbutton.addEventListener('click', function() {
+  window.open(result.result.video_hd, '_blank');
+});
+
+        const videoElement = document.createElement('video');
+        videoElement.controls = true;
+        videoElement.width = '310';
+        videoElement.height = '310';
+        const sourceElement = document.createElement('source');
+        sourceElement.src = result.result.video1;
+        sourceElement.type = 'video/mp4';
+        videoElement.appendChild(sourceElement);
+        
+        const videoButton = document.createElement('button'); // Mengganti elemen 'a' dengan 'button'
+videoButton.id = 'downloadButton';
+videoButton.innerText = 'Download video';
+videoButton.addEventListener('click', function() {
+  window.open(result.result.video1, '_blank');
+});
+        
+
+        hasilContainer.innerHTML = '';
+     
+        
+        hasilContainer.appendChild(videoElement);
+        hasilContainer.appendChild(textElement);
+        hasilContainer.appendChild(videoButton);
+        hasilContainer.appendChild(hdbutton);
+        hasilContainer.appendChild(wmbutton);
+      } catch (error) {
+        console.error(error.message);
+      }
+    });
+    
+    
     function salinTeks() {
             var teksToCopy = document.getElementById("teksToCopy");
             teksToCopy.select();
